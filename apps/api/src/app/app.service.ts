@@ -1,8 +1,9 @@
+import { Game } from '@bg-hoard/util-interface';
 import { Injectable } from '@nestjs/common';
 
 @Injectable()
 export class AppService {
-  private games = [
+  private games: Game[] = [
     {
       id: 'settlers-in-the-can',
       name: 'Settlers in the Can',
@@ -10,7 +11,7 @@ export class AppService {
       description:
         'Help your bug family claim the best real estate in a spilled can of beans.',
       price: 35,
-      rating: Math.random()
+      rating: Math.random(),
     },
     {
       id: 'chess-pie',
@@ -18,7 +19,7 @@ export class AppService {
       image: '/assets/chess.png', // 'https://media.giphy.com/media/iCZyBnPBLr0dy/giphy.gif',
       description: 'A circular game of Chess that you can eat as you play.',
       price: 15,
-      rating: Math.random()
+      rating: Math.random(),
     },
     {
       id: 'purrfection',
@@ -26,8 +27,8 @@ export class AppService {
       image: '/assets/cat.png', // 'https://media.giphy.com/media/12xMvwvQXJNx0k/giphy.gif',
       description: 'A cat grooming contest goes horribly wrong.',
       price: 45,
-      rating: Math.random()
-    }
+      rating: Math.random(),
+    },
   ];
 
   getGames() {
@@ -35,6 +36,6 @@ export class AppService {
   }
 
   getGame(id: string) {
-    return this.games.find(game => id === game.id);
+    return this.games.find((game) => id === game.id);
   }
 }
