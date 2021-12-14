@@ -63,7 +63,18 @@
         "jestConfig": "apps/admin-ui/jest.config.js",
         "passWithNoTests": true
       }
+    },
+    "deploy": {
+      "executor": "@nrwl/workspace:run-commands",
+      "outputs": [],
+      "options": {
+        "commands": [
+          "nx build admin-ui",
+          "npm run surge dist/apps/admin-ui ${SURGE_DOMAIN_ADMIN_UI} -- --token ${SURGE_TOKEN}"
+        ],
+        "parallel": false
+      }
     }
   },
-  "tags": []
+  "tags": ["scope:admin-ui", "type:app"]
 }

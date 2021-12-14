@@ -3,7 +3,7 @@ import { libraryGenerator } from '@nrwl/workspace/generators';
 
 interface Schema {
   name: string;
-  directory: string;
+  directory: 'admin-ui' | 'api' | 'store' | 'shared';
 }
 
 export default async function (tree: Tree, schema: Schema) {

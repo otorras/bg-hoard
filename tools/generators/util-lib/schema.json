@@ -19,6 +19,10 @@
         "type": "list",
         "items": [
           {
+            "value": "admin-ui",
+            "label": "admin-ui"
+          },
+          {
             "value": "api",
             "label": "api"
           },
