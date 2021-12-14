@@ -13,5 +13,7 @@ export class AppComponent {
   games = this.httpClient.get<Game[]>('/api/games');
   formatRating = formatRating;
 
-  constructor(private readonly httpClient: HttpClient) {}
+  constructor(private readonly httpClient: HttpClient) {
+    console.log('component constructed');
+  }
 }
