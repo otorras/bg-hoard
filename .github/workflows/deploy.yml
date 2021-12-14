@@ -15,6 +15,11 @@ jobs:
     runs-on: ubuntu-latest
     name: Deploying apps
     steps:
-      - uses: actions/checkout@v1
+      - uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
       - uses: bahmutov/npm-install@v1.4.5
-      - run: npm run nx affected -- --target=deploy --base=HEAD~1 --parallel
+      - uses: nrwl/nx-set-shas@v2
+        with:
+          main-branch-name: 'main'
+      - run: npm run nx affected -- --target=deploy --base=${{ env.NX_BASE }} --parallel
