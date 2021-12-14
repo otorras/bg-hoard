@@ -4,7 +4,7 @@ import NxWelcome from './nx-welcome';
 export function App() {
   return (
     <>
-      <NxWelcome title="Oriol admin-ui" />
+      <NxWelcome title="Admin UI" />
       <div />
     </>
   );

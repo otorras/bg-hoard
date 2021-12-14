@@ -16,5 +16,5 @@ jobs:
     name: Deploying apps
     steps:
       - uses: actions/checkout@v1
-      - uses: bahmutov/npm-install@v1
-      - run: npm run nx run-many -- --target=deploy --all --parallel
+      - uses: bahmutov/npm-install@v1.4.5
+      - run: npm run nx affected -- --target=deploy --base=origin/main --parallel
