@@ -11,11 +11,12 @@
       "dependencies": "*",
       "devDependencies": "*"
     },
-    ".eslintrc.json": "*"
+    ".eslintrc.json": "*",
+    ".github/workflows/ci.yml": "*"
   },
   "tasksRunnerOptions": {
     "default": {
-      "runner": "@nrwl/workspace/tasks-runners/default",
+      "runner": "@nrwl/nx-cloud",
       "options": {
         "cacheableOperations": [
           "build",
@@ -23,7 +24,8 @@
           "test",
           "e2e",
           "build-storybook"
-        ]
+        ],
+        "accessToken": "ZWJhZDI4NGMtYzNkYS00MjI2LThlYmYtMDdjMzI5ZTVkZjE4fHJlYWQtd3JpdGU="
       }
     }
   },
