@@ -10,7 +10,7 @@ import { getAllGames } from '../fake-api';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'Board Game Hoard';
+  title = 'Oriol Board Game Hoard';
   games$ = this.httpClient.get<Game[]>('/api/games');
   games = getAllGames();
   formatRating = formatRating;
