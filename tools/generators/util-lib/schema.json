@@ -14,18 +14,17 @@
     },
     "directory": {
       "type": "string",
-      "enum": ["store", "api", "shared"],
       "x-prompt": {
         "message": "Pick one of the possible values?",
         "type": "list",
         "items": [
           {
-            "value": "store",
-            "label": "store"
-          },
-          {
             "value": "api",
             "label": "api"
+          },
+          {
+            "value": "store",
+            "label": "store"
           },
           {
             "value": "shared",
